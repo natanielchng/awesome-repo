@@ -1,6 +1,11 @@
 # Getting Started With BIG-IP --- Summary
 _Last Update: 13 June 2025_
 
+
+* [Intro to BIG-IP](#1-intro-to-the-big-ip-system)
+* [Setting Up BIG-IP](#2-setting-up-big-ip)
+* [Archiving BIG-IP](#3-archiving-big-ip-configuration)
+
 ## 1: Intro to the BIG-IP System
 
 ### BIG-IP Architecture
@@ -45,9 +50,9 @@ _Last Update: 13 June 2025_
   * **Unlicensed** --> can be provisioned but will not work
   * **Limited** --> can be provisioned but have limited functionality
 * **Provisioning Options**
-* nominal --> minimum resources needed for module functionality (recommended settings)
-* minimum --> amount require to enable the module; no additional resources
-* dedicated --> module is the only one provisioned on the system. All other modules’ provisioning is set to “None”.
+  * **nominal** --> minimum resources needed for module functionality (recommended settings)
+  * **minimum** --> amount require to enable the module; no additional resources
+  * **dedicated** --> module is the only one provisioned on the system. All other modules’ provisioning is set to “None”.
 
 ### Device Certificates
 * SSL certificates are used for administrative tasks and inter-system communication
@@ -92,5 +97,3 @@ _Last Update: 13 June 2025_
     1. BIG-IP system auto creates a rotating backup of current configuration and saving it as `cs backup.ucs`. Number of files in rotation is set in `cs_backup_rotate.conf`
     2.	BIG-IP replaces the stored configuration on the hard drive with contents of UCS file
     3.	New configuration is loaded into memory for operation. Reboot may be needed.
-
-[[BIG-IP --- Restoring configuration from UCS File]]
